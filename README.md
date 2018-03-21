@@ -115,7 +115,7 @@ sh AppIcon.sh
 ```
 
 ### LaunchImage
-下载对应的`sh`文件，放到你想导出图片的目录下，将你的原图命名为`Default.png`，然后在控制台中进入该目录，执行
+下载对应的`sh`文件，放到你想导出图片的目录下，将你的原图命名为`default.png`，然后在控制台中进入该目录，执行
 ```
 sh AppLaunch.sh
 ```
