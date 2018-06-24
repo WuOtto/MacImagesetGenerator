@@ -103,7 +103,7 @@ done
 ![](http://ouem5hcj9.bkt.clouddn.com/AppIcon3.png)
 
 ## 效果展示
-![](http://ouem5hcj9.bkt.clouddn.com/AppIcon.png)
+![](http://ouem5hcj9.bkt.clouddn.com/AppIcon.png?123)
 
 ![](http://ouem5hcj9.bkt.clouddn.com/LaunchImage.png)
 
