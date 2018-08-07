@@ -13,71 +13,27 @@ Xcode里面的APP启动图资源包含两部分
 2. 修改图片尺寸并关联描述文件
 
 ### 生成描述文件
-使用`echo`简单粗暴的写入
+使用`cat`命令生成描述文件
+
 ```
 setContents(){
-echo {  >> ./AppIcon/Contents.json
-echo "  \"images\"" : [>> ./AppIcon/Contents.json
-echo "   "{>> ./AppIcon/Contents.json
-echo "      \"size\"" : "\"20x20\"",>> ./AppIcon/Contents.json
-echo "      \"idiom\"" : "\"iphone\"",>> ./AppIcon/Contents.json
-echo "      \"scale\"" : "\"2x\"",>> ./AppIcon/Contents.json
-echo "      \"filename\"" : "\"icon_40x40.png\"">> ./AppIcon/Contents.json
-echo "   "},>> ./AppIcon/Contents.json
-echo "   "{>> ./AppIcon/Contents.json
-echo "      \"size\"" : "\"20x20\"",>> ./AppIcon/Contents.json
-echo "      \"idiom\"" : "\"iphone\"",>> ./AppIcon/Contents.json
-echo "      \"scale\"" : "\"3x\"",>> ./AppIcon/Contents.json
-echo "      \"filename\"" : "\"icon_60x60.png\"">> ./AppIcon/Contents.json
-echo "   "},>> ./AppIcon/Contents.json
-echo "   "{>> ./AppIcon/Contents.json
-echo "      \"size\"" : "\"29x29\"",>> ./AppIcon/Contents.json
-echo "      \"idiom\"" : "\"iphone\"",>> ./AppIcon/Contents.json
-echo "      \"scale\"" : "\"2x\"",>> ./AppIcon/Contents.json
-echo "      \"filename\"" : "\"icon_58x58.png\"">> ./AppIcon/Contents.json
-echo "   "},>> ./AppIcon/Contents.json
-echo "   "{>> ./AppIcon/Contents.json
-echo "      \"size\"" : "\"29x29\"",>> ./AppIcon/Contents.json
-echo "      \"idiom\"" : "\"iphone\"",>> ./AppIcon/Contents.json
-echo "      \"scale\"" : "\"3x\"",>> ./AppIcon/Contents.json
-echo "      \"filename\"" : "\"icon_87x87.png\"">> ./AppIcon/Contents.json
-echo "   "},>> ./AppIcon/Contents.json
-echo "   "{>> ./AppIcon/Contents.json
-echo "      \"size\"" : "\"40x40\"",>> ./AppIcon/Contents.json
-echo "      \"idiom\"" : "\"iphone\"",>> ./AppIcon/Contents.json
-echo "      \"scale\"" : "\"2x\"",>> ./AppIcon/Contents.json
-echo "      \"filename\"" : "\"icon_80x80.png\"">> ./AppIcon/Contents.json
-echo "   "},>> ./AppIcon/Contents.json
-echo "   "{>> ./AppIcon/Contents.json
-echo "      \"size\"" : "\"40x40\"",>> ./AppIcon/Contents.json
-echo "      \"idiom\"" : "\"iphone\"",>> ./AppIcon/Contents.json
-echo "      \"scale\"" : "\"3x\"",>> ./AppIcon/Contents.json
-echo "      \"filename\"" : "\"icon_120x120.png\"">> ./AppIcon/Contents.json
-echo "   "},>> ./AppIcon/Contents.json
-echo "   "{>> ./AppIcon/Contents.json
-echo "      \"size\"" : "\"60x60\"",>> ./AppIcon/Contents.json
-echo "      \"idiom\"" : "\"iphone\"",>> ./AppIcon/Contents.json
-echo "      \"scale\"" : "\"2x\"",>> ./AppIcon/Contents.json
-echo "      \"filename\"" : "\"icon_120x120.png\"">> ./AppIcon/Contents.json
-echo "   "},>> ./AppIcon/Contents.json
-echo "   "{>> ./AppIcon/Contents.json
-echo "      \"size\"" : "\"60x60\"",>> ./AppIcon/Contents.json
-echo "      \"idiom\"" : "\"iphone\"",>> ./AppIcon/Contents.json
-echo "      \"scale\"" : "\"3x\"",>> ./AppIcon/Contents.json
-echo "      \"filename\"" : "\"icon_180x180.png\"">> ./AppIcon/Contents.json
-echo "   "},>> ./AppIcon/Contents.json
-echo "   "{>> ./AppIcon/Contents.json
-echo "      \"size\"" : "\"1024x1024\"",>> ./AppIcon/Contents.json
-echo "      \"idiom\"" : "\"ios-marketing\"",>> ./AppIcon/Contents.json
-echo "      \"scale\"" : "\"1x\"",>> ./AppIcon/Contents.json
-echo "      \"filename\"" : "\"icon_1024x1024.png\"">> ./AppIcon/Contents.json
-echo "   "}>> ./AppIcon/Contents.json
-echo " "],>> ./AppIcon/Contents.json
-echo "  \"info\"" : {>> ./AppIcon/Contents.json
-echo "     \"version\"" : 1,>> ./AppIcon/Contents.json
-echo "     \"author\"" : "\"xcode\"">> ./AppIcon/Contents.json
-echo " "}>> ./AppIcon/Contents.json
-echo }>> ./AppIcon/Contents.json
+cat <<EOF >./AppIcon/Contents.json
+{  
+    "images" : [
+    {
+      "size" : "20x20",
+      "idiom" : "iphone",
+      "scale" : "2x",
+      "filename" : "icon_40x40.png"
+    },
+    {
+      "size" : "20x20",
+      "idiom" : "iphone",
+      "scale" : "3x",
+      "filename" : "icon_60x60.png"
+    },
+    ...
+EOF
 }
 ```
 
@@ -122,3 +78,10 @@ sh AppLaunch.sh
 
 就可以得到你要的资源啦。
 
+## 更新日志
+### 2018-08-07 
+更新代码，使用`cat`命令替换`echo`生成Contents.json文件  
+感谢[@LinMaris](https://github.com/LinMaris)提供的思路
+
+### 2018-06-24
+更新`iPad`图标支持

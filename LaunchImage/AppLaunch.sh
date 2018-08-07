@@ -1,60 +1,60 @@
 #!/bin/sh
 
 Contents(){
-
-echo {  >> ./LaunchImage/Contents.json
-echo "  \"images\"" : [>> ./LaunchImage/Contents.json
-echo "   "{>> ./LaunchImage/Contents.json
-echo "      \"extent\"" : "\"full-screen\"",>> ./LaunchImage/Contents.json
-echo "      \"idiom\"" : "\"iphone\"",>> ./LaunchImage/Contents.json
-echo "      \"subtype\"" : "\"2436h\"",>> ./LaunchImage/Contents.json
-echo "      \"filename\"" : "\"Default1125x2436.png\"",>> ./LaunchImage/Contents.json
-echo "      \"minimum-system-version\"" : "\"11.0\"",>> ./LaunchImage/Contents.json
-echo "      \"orientation\"" : "\"portrait\"",>> ./LaunchImage/Contents.json
-echo "      \"scale\"" : "\"3x\"">> ./LaunchImage/Contents.json
-echo "   "},>> ./LaunchImage/Contents.json
-echo "   "{>> ./LaunchImage/Contents.json
-echo "      \"extent\"" : "\"full-screen\"",>> ./LaunchImage/Contents.json
-echo "      \"idiom\"" : "\"iphone\"",>> ./LaunchImage/Contents.json
-echo "      \"subtype\"" : "\"736h\"",>> ./LaunchImage/Contents.json
-echo "      \"filename\"" : "\"Default1242x2208.png\"",>> ./LaunchImage/Contents.json
-echo "      \"minimum-system-version\"" : "\"8.0\"",>> ./LaunchImage/Contents.json
-echo "      \"orientation\"" : "\"portrait\"",>> ./LaunchImage/Contents.json
-echo "      \"scale\"" : "\"3x\"">> ./LaunchImage/Contents.json
-echo "   "},>> ./LaunchImage/Contents.json
-echo "   "{>> ./LaunchImage/Contents.json
-echo "      \"extent\"" : "\"full-screen\"",>> ./LaunchImage/Contents.json
-echo "      \"idiom\"" : "\"iphone\"",>> ./LaunchImage/Contents.json
-echo "      \"subtype\"" : "\"667h\"",>> ./LaunchImage/Contents.json
-echo "      \"filename\"" : "\"Default750x1334.png\"",>> ./LaunchImage/Contents.json
-echo "      \"minimum-system-version\"" : "\"8.0\"",>> ./LaunchImage/Contents.json
-echo "      \"orientation\"" : "\"portrait\"",>> ./LaunchImage/Contents.json
-echo "      \"scale\"" : "\"2x\"">> ./LaunchImage/Contents.json
-echo "   "},>> ./LaunchImage/Contents.json
-echo "   "{>> ./LaunchImage/Contents.json
-echo "      \"extent\"" : "\"full-screen\"",>> ./LaunchImage/Contents.json
-echo "      \"idiom\"" : "\"iphone\"",>> ./LaunchImage/Contents.json
-echo "      \"filename\"" : "\"Default640x960.png\"",>> ./LaunchImage/Contents.json
-echo "      \"minimum-system-version\"" : "\"7.0\"",>> ./LaunchImage/Contents.json
-echo "      \"orientation\"" : "\"portrait\"",>> ./LaunchImage/Contents.json
-echo "      \"scale\"" : "\"2x\"">> ./LaunchImage/Contents.json
-echo "   "},>> ./LaunchImage/Contents.json
-echo "   "{>> ./LaunchImage/Contents.json
-echo "      \"extent\"" : "\"full-screen\"",>> ./LaunchImage/Contents.json
-echo "      \"idiom\"" : "\"iphone\"",>> ./LaunchImage/Contents.json
-echo "      \"subtype\"" : "\"retina4\"",>> ./LaunchImage/Contents.json
-echo "      \"filename\"" : "\"Default640x1136.png\"",>> ./LaunchImage/Contents.json
-echo "      \"minimum-system-version\"" : "\"7.0\"",>> ./LaunchImage/Contents.json
-echo "      \"orientation\"" : "\"portrait\"",>> ./LaunchImage/Contents.json
-echo "      \"scale\"" : "\"2x\"">> ./LaunchImage/Contents.json
-echo "   "}>> ./LaunchImage/Contents.json
-echo " "],>> ./LaunchImage/Contents.json
-echo "  \"info\"" : {>> ./LaunchImage/Contents.json
-echo "     \"version\"" : 1,>> ./LaunchImage/Contents.json
-echo "     \"author\"" : "\"xcode\"">> ./LaunchImage/Contents.json
-echo " "}>> ./LaunchImage/Contents.json
-echo }>> ./LaunchImage/Contents.json
-
+cat <<EOF >./LaunchImage/Contents.json
+ {  
+    "images" : [
+    {
+       "extent" : "full-screen",
+       "idiom" : "iphone",
+       "subtype" : "2436h",
+       "filename" : "Default1125x2436.png",
+       "minimum-system-version" : "11.0",
+       "orientation" : "portrait",
+       "scale" : "3x"
+    },
+    {
+       "extent" : "full-screen",
+       "idiom" : "iphone",
+       "subtype" : "736h",
+       "filename" : "Default1242x2208.png",
+       "minimum-system-version" : "8.0",
+       "orientation" : "portrait",
+       "scale" : "3x"
+    },
+    {
+       "extent" : "full-screen",
+       "idiom" : "iphone",
+       "subtype" : "667h",
+       "filename" : "Default750x1334.png",
+       "minimum-system-version" : "8.0",
+       "orientation" : "portrait",
+       "scale" : "2x"
+    },
+    {
+       "extent" : "full-screen",
+       "idiom" : "iphone",
+       "filename" : "Default640x960.png",
+       "minimum-system-version" : "7.0",
+       "orientation" : "portrait",
+       "scale" : "2x"
+    },
+    {
+       "extent" : "full-screen",
+       "idiom" : "iphone",
+       "subtype" : "retina4",
+       "filename" : "Default640x1136.png",
+       "minimum-system-version" : "7.0",
+       "orientation" : "portrait",
+       "scale" : "2x"
+    }
+    ],
+      "info" : {
+        "version" : 1,
+        "author" : "xcode"
+    }
+ }
+EOF
 }
 
 setImage(){
