@@ -54,14 +54,14 @@ iconWithSize $size
 done
 ```
 
-![](http://ouem5hcj9.bkt.clouddn.com/AppIcon2.png)
+![](./md_res/AppIcon2.png)
 
-![](http://ouem5hcj9.bkt.clouddn.com/AppIcon3.png)
+![](./md_res/AppIcon3.png)
 
 ## 效果展示
-![](http://ouem5hcj9.bkt.clouddn.com/AppIcon.png?123)
+![](./md_res/AppIcon.png?123)
 
-![](http://ouem5hcj9.bkt.clouddn.com/LaunchImage.png)
+![](./md_res/LaunchImage.png)
 
 ## 怎么使用
 ### AppIcon
