@@ -79,6 +79,8 @@ sh AppLaunch.sh
 就可以得到你要的资源啦。
 
 ## 更新日志
+### 2019-04-28
+更新生成`XR`和`XS Max`的启动图
 ### 2018-08-07 
 更新代码，使用`cat`命令替换`echo`生成Contents.json文件  
 感谢[@LinMaris](https://github.com/LinMaris)提供的思路
