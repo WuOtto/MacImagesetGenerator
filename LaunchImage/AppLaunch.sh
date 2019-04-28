@@ -4,6 +4,24 @@ Contents(){
 cat <<EOF >./LaunchImage/Contents.json
  {  
     "images" : [
+       {
+      "extent" : "full-screen",
+      "idiom" : "iphone",
+      "subtype" : "2688h",
+      "filename" : "Default1242x2688.png",
+      "minimum-system-version" : "12.0",
+      "orientation" : "portrait",
+      "scale" : "3x"
+    },
+      {
+      "extent" : "full-screen",
+      "idiom" : "iphone",
+      "subtype" : "1792h",
+      "filename" : "Default828x1792.png",
+      "minimum-system-version" : "12.0",
+      "orientation" : "portrait",
+      "scale" : "2x"
+    },
     {
        "extent" : "full-screen",
        "idiom" : "iphone",
@@ -63,6 +81,8 @@ setImage(){
     sips -z 1334 750 default.png --out ./LaunchImage/Default750x1334.png
     sips -z 2436 1125 default.png --out ./LaunchImage/Default1125x2436.png
     sips -z 2208 1242 default.png --out ./LaunchImage/Default1242x2208.png
+    sips -z 1792 828 default.png --out ./LaunchImage/Default828x1792.png
+    sips -z 2688 1242 default.png --out ./LaunchImage/Default1242x2688.png
 }
 
 #调用函数
